@@ -15,3 +15,12 @@ A production-style AI platform that enables natural-language querying over UK pr
 
 ## Focus
 This project prioritises system design, reliability, and data/AI integration rather than model training.
+
+## Running Locally
+
+```bash
+python -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+uvicorn api.main:app --reload
+
