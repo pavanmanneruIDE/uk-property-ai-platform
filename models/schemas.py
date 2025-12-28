@@ -1,11 +1,13 @@
 from pydantic import BaseModel
-from datetime import date
+from typing import List
 
-class PropertyTransaction(BaseModel):
-    price: int
-    date_of_transfer: date
-    postcode: str
-    property_type: str
-    town_city: str
-    district: str
-    county: str
+class Doc(BaseModel):
+    source: str
+    text: str
+
+class IngestRequest(BaseModel):
+    docs: List[Doc]
+
+class QueryRequest(BaseModel):
+    question: str
+    top_k: int = 5

@@ -1,3 +1,9 @@
 fastapi
 uvicorn
 pydantic
+python-dotenv
+
+faiss-cpu
+numpy
+
+ollama
